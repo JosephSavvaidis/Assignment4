@@ -69,7 +69,7 @@ if(moveRight == true){
     velocity.x = 0;
   }
 if(jump == true && location.y > 595  /*&& canJump == true*/){
-  jumpPower = 15;
+  jumpPower = 20;
   isJumping = true;
 }
 if(isJumping == true /*&& playerY < 375*/){
