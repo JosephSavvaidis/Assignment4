@@ -21,6 +21,9 @@ void keyPressed(){
   player.moveRight = true;
   }
   if(key == ' '){
+    if(player.isGrounded == true){//just trying to add extra chekcs for when framenUmber should be twleve, i just want it to be sure to play the animation
+    player.frameNumber = 12;
+    }
     player.jump = true;
     print("hello");
   }
