@@ -18,7 +18,7 @@ boolean canJump = true;
 boolean isGrounded = true;
 boolean playJump;
 //control how fast the player moves
-int moveSpeed = 7;
+int moveSpeed = 10;
 Player(){
   //load PVectors
   location = new PVector(200, 600);
