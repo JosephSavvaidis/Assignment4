@@ -7,11 +7,12 @@ class Enemy{
   PVector enemylocation;
   PVector enemyvelocity;
   PVector enemyacceleration;
+  boolean fontBig;
   Enemy(){
   //here
-  enemylocation = new PVector(600, 550);
+  enemylocation = new PVector(900, 550);
   enemyvelocity = new PVector(-5, 0);
-  enemyacceleration = new PVector(-0.001, 0);
+  enemyacceleration = new PVector(-0.002, 0);
   
   for(int i = 1; i < 5; i++){
     enemy[i] = loadImage("Enemy-" + i + ".png");
@@ -31,11 +32,18 @@ class Enemy{
 }
   }
   void getHit(){
+    if(fontBig == true){
+    score.fSize = 83;
+    fontBig = false;
+    }else if(fontBig == false){
+    score.fSize = 80;
+    }
     enemylocation.add(enemyvelocity);
     enemyvelocity.add(enemyacceleration);
     if(enemylocation.x <= - 150){
       score.points += 1;
-      enemylocation.x = 1300;
+      fontBig = true;
+      enemylocation.x = random(1550, 2000);
       //enemyvelocity.x = enemyvelocity.x - 1;
     }
     if(player.location.x >= enemylocation.x -hitBox + 25){

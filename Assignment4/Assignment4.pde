@@ -2,24 +2,34 @@ Enemy enemy;
 Player player;
 Monster monst;
 Score score;
-Tree tree;
+Groundback bg;
+SpeedLines speedL;
+SpeedLines speedL2;
 void setup() {
-  size(1200, 800);
+  size(1400, 800);
   player = new Player();
   monst = new Monster();
   enemy = new Enemy();
   score = new Score();
-  tree = new Tree();
+  bg = new Groundback();
+  speedL = new SpeedLines();
+  speedL2 = new SpeedLines();
 }
 
 void draw() {
   background(255);
+  
+  bg.drawBG();
   player.animate();
   player.move();
   //monst.animate();
   enemy.animate();
   enemy.getHit();
   score.showScore();
+  if(score.points > 20){
+    speedL.drawSpeedLines();
+  speedL2.drawSpeedLines();
+  }
   
   //check if get hit by enemy
   println(frameRate);
