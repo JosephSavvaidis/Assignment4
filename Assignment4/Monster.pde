@@ -7,7 +7,7 @@ class Monster{
 Monster(){
 for(int i = 1; i < 6; i++){
     monster[i] = loadImage("Monster-" + i + ".png");
-    frameNumber = i;
+    //frameNumber = i;
   }
 
 }

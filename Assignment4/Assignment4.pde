@@ -1,25 +1,29 @@
-
+Enemy enemy;
 Player player;
 Monster monst;
 void setup() {
   size(1200, 800);
   player = new Player();
   monst = new Monster();
+  enemy = new Enemy();
 }
 
 void draw() {
   background(255);
   player.animate();
   player.move();
-  monst.animate();
-  println(frameRate);
+  //monst.animate();
+  enemy.animate();
+  enemy.getHit();
+  //check if get hit by enemy
+  //println(frameRate);
 }
 //keyboard inputs
 //checking when key is pressed
 void keyPressed(){
   if(key == 'a' || key == 'A'){
   player.moveLeft = true;
-  print("griddy");
+  //print("griddy");
   }
   if(key == 'd' || key == 'D'){
   player.moveRight = true;
@@ -29,7 +33,7 @@ void keyPressed(){
     player.frameNumber = 12;
     }
     player.jump = true;
-    print("hello");
+    //print("hello");
   }
   }
   //checking when key is released
@@ -42,7 +46,7 @@ void keyPressed(){
   }
   if(key == ' '){
     player.jump = false;
-    print("griddy");
+    //print("griddy");
     
   }
   }
