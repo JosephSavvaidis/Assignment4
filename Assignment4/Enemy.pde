@@ -8,7 +8,7 @@ class Enemy{
   PVector enemyvelocity;
   Enemy(){
   
-  enemylocation = new PVector(600, 450);
+  enemylocation = new PVector(600, 700);
   enemyvelocity = new PVector(-5, 0);
   
   for(int i = 1; i < 5; i++){
@@ -32,7 +32,7 @@ class Enemy{
     
     if(player.location.x >= enemylocation.x -hitBox + 25){
    if(player.location.x <= enemylocation.x + hitBox + 15){
-     if(player.location.y >= enemylocation.y -hitBox){
+     if(player.location.y >= enemylocation.y -hitBox + 13){
        if(player.location.y <= enemylocation.y + hitBox){
          //print("YOU DEAD! ");
          //death = true;
