@@ -11,7 +11,7 @@ void draw() {
   background(255);
   player.animate();
   player.move();
-  monst.animate();
+  //monst.animate();
 }
 //keyboard inputs
 //checking when key is pressed
