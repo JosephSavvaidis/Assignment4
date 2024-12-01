@@ -33,7 +33,7 @@ void keyPressed(){
     player.frameNumber = 12;
     }
     player.jump = true;
-    //print("hello");
+    
   }
   }
   //checking when key is released
@@ -46,7 +46,7 @@ void keyPressed(){
   }
   if(key == ' '){
     player.jump = false;
-    //print("griddy");
+    
     
   }
   }

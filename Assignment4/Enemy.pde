@@ -6,10 +6,12 @@ class Enemy{
   int hitBox = 100;
   PVector enemylocation;
   PVector enemyvelocity;
+  PVector enemyacceleration;
   Enemy(){
   
-  enemylocation = new PVector(600, 700);
+  enemylocation = new PVector(600, 550);
   enemyvelocity = new PVector(-5, 0);
+  enemyacceleration = new PVector(-0.001, 0);
   
   for(int i = 1; i < 5; i++){
     enemy[i] = loadImage("Enemy-" + i + ".png");
@@ -29,7 +31,12 @@ class Enemy{
 }
   }
   void getHit(){
-    
+    enemylocation.add(enemyvelocity);
+    enemyvelocity.add(enemyacceleration);
+    if(enemylocation.x <= - 150){
+      enemylocation.x = 1300;
+      //enemyvelocity.x = enemyvelocity.x - 1;
+    }
     if(player.location.x >= enemylocation.x -hitBox + 25){
    if(player.location.x <= enemylocation.x + hitBox + 15){
      if(player.location.y >= enemylocation.y -hitBox + 13){
