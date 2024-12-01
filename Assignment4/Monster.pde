@@ -14,7 +14,7 @@ for(int i = 1; i < 6; i++){
 void animate(){
   imageMode(CENTER);
   
-  image(monster[frameNumber], 200, 400, 600, 600);
+  image(monster[frameNumber], 150, 450, 400, 400);
   if (millis() - lastFrameTime > 1000 / frameRate) {
     frameNumber++; // Move to the next frame
     

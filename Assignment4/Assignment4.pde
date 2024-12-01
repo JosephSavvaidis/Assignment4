@@ -2,7 +2,7 @@
 Player player;
 Monster monst;
 void setup() {
-  size(1200, 700);
+  size(1200, 800);
   player = new Player();
   monst = new Monster();
 }
@@ -11,7 +11,8 @@ void draw() {
   background(255);
   player.animate();
   player.move();
-  //monst.animate();
+  monst.animate();
+  println(frameRate);
 }
 //keyboard inputs
 //checking when key is pressed

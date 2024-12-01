@@ -113,8 +113,8 @@ if(location.y > 600){
 if(location.x < 0){
   location.x = 0;
 }
-if(location.x > 750){
-location.x = 750;
+if(location.x > 1100){
+location.x = 1100;
 }
 }
 
