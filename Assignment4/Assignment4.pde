@@ -1,11 +1,13 @@
 Enemy enemy;
 Player player;
 Monster monst;
+Score score;
 void setup() {
   size(1200, 800);
   player = new Player();
   monst = new Monster();
   enemy = new Enemy();
+  score = new Score();
 }
 
 void draw() {
@@ -15,8 +17,11 @@ void draw() {
   //monst.animate();
   enemy.animate();
   enemy.getHit();
+  score.showScore();
   //check if get hit by enemy
   //println(frameRate);
+  
+  
 }
 //keyboard inputs
 //checking when key is pressed

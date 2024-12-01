@@ -8,7 +8,7 @@ class Enemy{
   PVector enemyvelocity;
   PVector enemyacceleration;
   Enemy(){
-  
+  //here
   enemylocation = new PVector(600, 550);
   enemyvelocity = new PVector(-5, 0);
   enemyacceleration = new PVector(-0.001, 0);
@@ -34,6 +34,7 @@ class Enemy{
     enemylocation.add(enemyvelocity);
     enemyvelocity.add(enemyacceleration);
     if(enemylocation.x <= - 150){
+      score.points += 1;
       enemylocation.x = 1300;
       //enemyvelocity.x = enemyvelocity.x - 1;
     }
