@@ -2,12 +2,14 @@ Enemy enemy;
 Player player;
 Monster monst;
 Score score;
+Tree tree;
 void setup() {
   size(1200, 800);
   player = new Player();
   monst = new Monster();
   enemy = new Enemy();
   score = new Score();
+  tree = new Tree();
 }
 
 void draw() {
@@ -18,8 +20,9 @@ void draw() {
   enemy.animate();
   enemy.getHit();
   score.showScore();
+  
   //check if get hit by enemy
-  //println(frameRate);
+  println(frameRate);
   
   
 }
