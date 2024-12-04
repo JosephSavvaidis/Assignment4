@@ -8,6 +8,10 @@ class Enemy2{
   PVector enemyvelocity;
   PVector enemyacceleration;
   boolean fontBig;
+  
+  float angle = 0; // Angle for sine wave
+  float amplitude = 6; // Amplitude of the sine wave
+  float waveSpeed = 0.05; // Speed of the sine wave oscillation
   Enemy2(){
   //here
   enemylocation = new PVector(900, 550);
@@ -15,7 +19,7 @@ class Enemy2{
   enemyacceleration = new PVector(-0.002, 0);
   
   for(int i = 1; i < 5; i++){
-    enemy[i] = loadImage("Enemy-" + i + ".png");
+    enemy[i] = loadImage("EnemyFly-" + i + ".png");
   }
   }
   void animate(){
@@ -40,7 +44,13 @@ class Enemy2{
     }
     enemylocation.add(enemyvelocity);
     enemyvelocity.add(enemyacceleration);
+    
+    // Add sinusoidal movement to the y-coordinate
+    enemylocation.y += sin(angle) * amplitude;
+    angle += waveSpeed;
+    
     if(enemylocation.x <= - 150){
+      enemylocation.y = random(100, 600);
       score.points += 1;
       fontBig = true;
       enemylocation.x = random(1550, 2000);

@@ -1,4 +1,5 @@
 Enemy enemy;
+Enemy2 enemyFly;
 Player player;
 Monster monst;
 Score score;
@@ -7,6 +8,7 @@ SpeedLines speedL;
 SpeedLines speedL2;
 void setup() {
   size(1400, 800);
+  enemyFly = new Enemy2();
   player = new Player();
   monst = new Monster();
   enemy = new Enemy();
@@ -23,6 +25,8 @@ void draw() {
   player.animate();
   player.move();
   //monst.animate();
+  enemyFly.animate();
+  enemyFly.getHit();
   enemy.animate();
   enemy.getHit();
   score.showScore();
