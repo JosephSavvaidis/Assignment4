@@ -6,8 +6,10 @@ Score score;
 Groundback bg;
 SpeedLines speedL;
 SpeedLines speedL2;
+
+boolean startScreen;
 void setup() {
-  size(1400, 800);
+  size(1600, 800);
   enemyFly = new Enemy2();
   player = new Player();
   monst = new Monster();

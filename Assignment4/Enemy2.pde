@@ -10,11 +10,11 @@ class Enemy2{
   boolean fontBig;
   
   float angle = 0; // Angle for sine wave
-  float amplitude = 6; // Amplitude of the sine wave
+  float amplitude = 7; // Amplitude of the sine wave
   float waveSpeed = 0.05; // Speed of the sine wave oscillation
   Enemy2(){
   //here
-  enemylocation = new PVector(900, 550);
+  enemylocation = new PVector(3000, 300);
   enemyvelocity = new PVector(-5, 0);
   enemyacceleration = new PVector(-0.002, 0);
   
@@ -51,9 +51,9 @@ class Enemy2{
     
     if(enemylocation.x <= - 150){
       enemylocation.y = random(100, 600);
-      score.points += 1;
-      fontBig = true;
-      enemylocation.x = random(1550, 2000);
+      //score.points += 1;
+      //fontBig = true;
+      enemylocation.x = random(1700, 2200);
       //enemyvelocity.x = enemyvelocity.x - 1;
     }
     if(player.location.x >= enemylocation.x -hitBox + 25){

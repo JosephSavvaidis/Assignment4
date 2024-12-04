@@ -18,7 +18,7 @@ boolean canJump = true;
 boolean isGrounded = true;
 boolean playJump;
 //control how fast the player moves
-int moveSpeed = 10;
+int moveSpeed = 11;
 Player(){
   //load PVectors
   location = new PVector(200, 600);
@@ -94,7 +94,7 @@ if(moveRight == true){
   }
 if(jump == true && location.y > 595  /*&& canJump == true*/){
   //frameNumber = 12;//hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-  jumpPower = 20;
+  jumpPower = 22;
   isJumping = true;
 }
 if(isJumping == true /*&& playerY < 375*/){
@@ -113,8 +113,8 @@ if(location.y > 600){
 if(location.x < 150){
   location.x = 150;
 }
-if(location.x > 1100){
-location.x = 1100;
+if(location.x > 1400){
+location.x = 1400;
 }
 }
 

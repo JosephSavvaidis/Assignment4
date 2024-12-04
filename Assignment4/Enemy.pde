@@ -10,7 +10,7 @@ class Enemy{
   boolean fontBig;
   Enemy(){
   //here
-  enemylocation = new PVector(900, 550);
+  enemylocation = new PVector(2000, 550);
   enemyvelocity = new PVector(-5, 0);
   enemyacceleration = new PVector(-0.002, 0);
   
@@ -43,7 +43,7 @@ class Enemy{
     if(enemylocation.x <= - 150){
       score.points += 1;
       fontBig = true;
-      enemylocation.x = random(1550, 2000);
+      enemylocation.x = random(1700, 2100);
       //enemyvelocity.x = enemyvelocity.x - 1;
     }
     if(player.location.x >= enemylocation.x -hitBox + 25){
