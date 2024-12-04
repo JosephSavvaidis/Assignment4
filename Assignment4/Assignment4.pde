@@ -6,8 +6,8 @@ Score score;
 Groundback bg;
 SpeedLines speedL;
 SpeedLines speedL2;
-
-boolean startScreen;
+StartScreen startMenu;
+boolean play = false;
 void setup() {
   size(1600, 800);
   enemyFly = new Enemy2();
@@ -18,6 +18,7 @@ void setup() {
   bg = new Groundback();
   speedL = new SpeedLines();
   speedL2 = new SpeedLines();
+  startMenu = new StartScreen();
 }
 
 void draw() {
@@ -36,7 +37,7 @@ void draw() {
     speedL.drawSpeedLines();
   speedL2.drawSpeedLines();
   }
-  
+  startMenu.drawStartScreen();
   //check if get hit by enemy
   println(frameRate);
   
