@@ -80,6 +80,7 @@ void keyPressed(){
   score.points = 0;
   speedL.velocity.x = -3;
   speedL2.velocity.x = -3;
+  
   }
   //checking when key is released
   void keyReleased(){
