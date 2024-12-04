@@ -23,7 +23,10 @@ void setup() {
 
 void draw() {
   background(255);
-  
+  if(play == false){
+  startMenu.drawStartScreen();
+  reset();
+  }else if(play == true){
   bg.drawBG();
   player.animate();
   player.move();
@@ -37,10 +40,10 @@ void draw() {
     speedL.drawSpeedLines();
   speedL2.drawSpeedLines();
   }
-  startMenu.drawStartScreen();
+  
   //check if get hit by enemy
   println(frameRate);
-  
+  }
   
 }
 //keyboard inputs
@@ -60,6 +63,23 @@ void keyPressed(){
     player.jump = true;
     
   }
+  if(play == false){
+  if(key == 'm' || key == 'M'){
+  play = true;
+}
+  }
+  }
+  void reset(){
+  enemy.enemylocation.x = 2000;
+  enemy.enemyvelocity.x = -5;
+  enemyFly.enemylocation.x = 3000;
+  enemyFly.enemylocation.y = 300;
+  enemyFly.enemyvelocity.x = -5;
+  player.location.x = 200;
+  player.location.y = 600;
+  score.points = 0;
+  speedL.velocity.x = -3;
+  speedL2.velocity.x = -3;
   }
   //checking when key is released
   void keyReleased(){
@@ -74,4 +94,5 @@ void keyPressed(){
     
     
   }
+  
   }

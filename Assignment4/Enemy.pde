@@ -54,6 +54,7 @@ class Enemy{
          //death = true;
          //gameEnd = true;
          print("You died");
+         play = false;
          /*if(player.location.y > 540){
          player.location.y = 540;
          }*/
